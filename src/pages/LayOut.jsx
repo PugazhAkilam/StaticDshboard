@@ -11,12 +11,14 @@ const drawerWidth = 240;
 const AdminLayout = () => {
   const {
     mobileOpen,
-    setMobileOpen,    // Add this line
+    setMobileOpen,
     isDarkMode,
     toggleTheme,
     isMobile,
     handleDrawerToggle,
-    handleLogout
+    handleLogout,
+    openSubMenu,
+    handleSubMenuToggle
   } = useLayout();
 
   return (
@@ -45,6 +47,8 @@ const AdminLayout = () => {
               isDarkMode={isDarkMode}
               isMobile={isMobile}
               setMobileOpen={setMobileOpen}
+              openSubMenu={openSubMenu}
+              handleSubMenuToggle={handleSubMenuToggle}
             />
           </Drawer>
           <Drawer
